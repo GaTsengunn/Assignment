@@ -1,0 +1,419 @@
+  @import url('https://fonts.googleapis.com/css2?family=Prompt:wght@700&display=swap');
+body{
+    background: #26262a;
+    font-family: 'Prompt', sans-serif;
+    font-size: large;
+    }
+    .navbar{
+      background: #26262a !important;
+      border:1px solid #a1a0a1;
+    }
+    .nav-link{
+      color: #DCDDDD;
+    }
+    .navbar .nav-item .nav-link:first-letter {
+     color: #f8f448;
+    }
+    .navbar-toggler{
+      background-color: #DCDDDD;
+    }
+    .btn{
+      background-color:#f31c9f;
+      color:#dcdddd
+    }
+    .btn:first-letter{
+      color: #f8f448;
+    }
+    h2{
+      margin-top: 100px;
+      color: #f31c9f;
+    }
+    h3{
+      color: #DCDDDD;
+      text-align: justify;
+    }
+    h4{
+      text-align: center;
+      color: #DCDDDD;
+      margin-top: 50px;
+    }
+    .skills .container{
+      min-height: 100vh;
+      width: 100vw;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+  .skill-bx{
+      width: 80%;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+      place-items: center;
+      border:1px solid #a1a0a1;
+      padding: 80px;
+      box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    }
+    .skill-bx .left-bx{
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+    
+    }
+    
+    .skill-bx .right-bx{
+      width: 100%;
+      display: flex;
+      flex-direction: column
+    
+    }
+    
+    .skill-bx .bar{
+      width: 100%;
+      margin: 20px 0;
+    }
+    .skill-bx .bar:first-child{
+      margin-top: 0;
+    }
+    
+    .skill-bx .bar .info{
+      font-size: 16px;
+      font-weight: 500;
+      color: #DCDDDD
+    }
+    
+    .skill-bx .bar .info span{
+      font-size: 16px;
+      font-weight: 500;
+      color: #DCDDDD;
+      opacity: 0;
+      animation: showText 0.5s 1s linear forwards;
+    }
+    
+    @keyframes showText {
+      100%{
+        opacity: 1;
+      }
+    }
+    .skill-bx .progress-line{
+      position: relative;
+      height: 10px;
+      width: 100%;
+      background: #808e9b;
+      border-radius: 10px;
+      transform: scaleX(0);
+      transform-origin: left;
+      animation: animate 1s cubic-bezier(1,0,0.5,1) forwards;
+    }
+    
+    .skill-bx .progress-line span{
+      height: 100%;
+      background:#f31c9f;
+      position: absolute;
+      border-radius: 10px;
+      transform: scaleX(0);
+      transform-origin: left;
+      animation: animate 1s 1s cubic-bezier(1,0,0.5,1) forwards;
+    }
+     
+    
+    
+    @keyframes animate {
+      100%{
+        transform: scaleX(1);
+      }
+    }
+    
+    .skill-bx .progress-line.html span{
+      width: 90%;
+    }
+    
+    .skill-bx .progress-line.css span{
+      width: 80%;
+    }
+    
+    .skill-bx .progress-line.javascript span{
+      width: 30%;
+    }
+    
+    .skill-bx .progress-line.csharp span{
+      width: 65%;
+    }
+    
+    .skill-bx .progress-line.dart span{
+      width: 60%;
+    }
+    
+    .skill-bx .progress-line.english span{
+      width: 95%;
+    }
+    
+    .skill-bx .progress-line span::before{
+      content: '';
+      position: absolute;
+      right: 0;
+      top: -10px;
+      height: 0;
+      width: 0;
+      border: 7px solid transparent;
+      border-top-color: #000;
+      opacity: 0;
+      animation: showText2 0.5s 1.5s linear forwards;
+    }
+    
+    .skill-bx .progress-line span::after{
+      position: absolute;
+      right: -12px;
+      top: -28px;
+      background: #000;
+      color: #fff;
+      font-size: 12px;
+      padding: 1px 8px;
+      border-radius: 3px;
+      opacity: 0;
+      animation: showText2 0.5s 1.5s linear forwards;
+      
+    }
+    
+    @keyframes showText2 {
+      100%{
+        opacity: 1;
+      }
+    }
+    
+    .skill-bx .progress-line.html span::after{
+      content: '90%';
+    }
+    
+    .skill-bx .progress-line.css span::after{
+      content: '80%';
+    }
+    
+    .skill-bx .progress-line.javascript span::after{
+      content: '30%';
+    }
+    
+    .skill-bx .progress-line.csharp span::after{
+      content: '65%';
+    }
+    
+    .skill-bx .progress-line.dart span::after{
+      content: '60%';
+    }
+    
+    .skill-bx .progress-line.english span::after{
+      content: '95%';
+    }
+  
+    @media screen and (max-width: 768px) {
+      .skill-bx {
+          grid-template-columns: 1fr;
+          padding: 50px;
+          gap: 20px;
+      }
+    }
+
+    
+
+    *,
+*::before,
+*::after{
+    box-sizing: border-box;
+}
+html{
+    line-height: 1.15;
+}
+a{
+    color: #333333;
+    font-weight: 400;
+    outline: none;
+    text-decoration: none;
+    transition: 0.5s;
+}
+.container{
+    width: 100%;
+    padding-right:15px ;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+.column{
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+.section-title{
+    position: relative;
+    width: 100%;
+    text-align: center;
+    padding: 45px 0 30px 0;
+}
+.section-title::after{
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 1px;
+    left: 0;
+    background: #eeeeee;
+}
+.effect{
+    position: relative;
+    margin-bottom: 30px;
+    overflow: hidden;
+}
+.effect .effect-img{
+    font-size: 0;
+    overflow: hidden;
+}
+.effect .effect-img img{
+    width: 100%;
+    height: auto;
+    transition: all .3s;
+}
+.effect:hover .effect-img img{
+    transform: scale(1.2);
+}
+.effect .effect-text{
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    bottom: 15px;
+    left: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: rgba(0, 0, 0, .5);
+    overflow: hidden;
+    transition: all .3s ease-in;
+    opacity: 0;
+}
+.effect .effect-text .inner{
+    position: absolute;
+    padding: 15px;
+    z-index: 1;
+}
+.effect .effect-text:before,
+.effect .effect-text:after{
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 0;
+    content: '';
+}
+.effect .effect-text:before{
+    border-top: 3px solid #f31c9f;
+    border-right: 3px solid #f31c9f;
+    left: -100%;
+    top: 0;
+}
+.effect .effect-text:after{
+    border-bottom: 3px solid yellow;
+    border-left: 3px solid yellow;
+    left: 100%;
+    bottom: 0;
+}
+.effect:hover .effect-text{
+    opacity: 1;
+}
+.effect:hover .effect-text:after,
+.effect:hover .effect-text:before{
+    animation-delay: .1s;
+    animation-duration: .5s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+.effect:hover .effect-text:after{
+    animation-name: left-up;
+}
+.effect:hover .effect-text:before{
+    animation-name: right-dn;
+}
+@-webkit-keyframes left-up {
+    0% {
+        left: 100%;
+        height: 0;
+    }
+    50% {
+        left: 0;
+        height: 0;
+    }
+    100% {
+        height: 100%;
+        left: 0;
+    }
+}
+@-webkit-keyframes right-dn {
+    0% {
+        left: -100%;
+        height: 0;
+    }
+    50% {
+        left: 0;
+        height: 0;
+    }
+    100% {
+        height: 100%;
+        left: 0;
+    }
+}
+.effect .effect-text h2{
+    height: 45px;
+    color: #ffffff;
+    font-size: 25px;
+    margin: 0;
+}
+.effect .effect-text p{
+    color: #ffffff;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+.effect .effect-btn .btn{
+    display: inline-block;
+    height: 35px;
+    padding: 7px 15px;
+    color: #333333;
+    background: #000;
+}
+@media (min-width:576px){
+    .container{
+        max-width: 540px;
+    }
+    .column{
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+@media (min-width: 768px){
+    .container{
+        max-width: 720px;
+    }
+    .column{
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
+@media (min-width:992px){
+    .container{
+        max-width: 960px;
+    }
+    .column{
+        flex: 0 0 33.333333%;
+        max-width: 33.333333%;
+    }
+}
+@media (min-width:1200px){
+    .container{
+        max-width: 1140px;
+    }
+}
